@@ -54,7 +54,7 @@ const calculateMinCost = (order) => {
     return Math.round(minCost);
 };
 
-app.post('/calculate', (req, res) => {
+app.post('/', (req, res) => {
     const order = req.body;
     const cost = calculateMinCost(order);
     res.json({ minimum_cost: cost });
